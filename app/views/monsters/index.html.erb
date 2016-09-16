@@ -1,0 +1,39 @@
+<%= link_to "Create New",new_monster_path %>
+<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+
+<div class="row">
+        <div class="panel mb25">
+        <div class="panel-body">
+          <table class="table table-responsive table-hover" id="datatable">
+              <thead>
+              <tr>
+                <th>Name</th>
+                <th>Power</th>
+                <th>Type</th>
+                <th>Show</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+              </thead>
+              <tbody>
+              <%- @monsters.each do |monster|%>
+                <tr class="odd gradeX">
+                  <td><%= monster.name %></td>
+                  <td><%= monster.power %></td>
+                  <td><%= monster.type %></td>
+                  <td><%= link_to "Show",monster_path(monster) %></td>
+                  <td><%= link_to "Edit",edit_monster_path(monster) %></td>
+                  <td><%= link_to "Delete",monster_path(monster),:method => "delete" %></td>
+                </tr>
+              <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#datatable').dataTable();
+  } );
+</script> 

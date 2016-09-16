@@ -1,0 +1,16 @@
+<%= form_for @monster do |m| %>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <%= m.text_field :name,"class"=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="power">Power:</label>
+    <%= m.text_field :power,"class"=>"form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="power">Type:</label>
+      <%= m.select(:type,options_for_select(['fire','water','earth','electric
+','wind']),{}, { :class => 'form-control'}) %>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+<% end %>
