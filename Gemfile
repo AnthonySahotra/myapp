@@ -17,11 +17,6 @@ gem 'jquery-rails'
 gem 'gravtastic'
 gem 'jquery-datatables-rails', '~> 3.3.0'
 gem 'carmen-rails', '~> 1.0.0'
-gem 'country_select'
-gem 'country_state_select'
-gem 'carrierwave'
-gem 'bootstrap-datetimepicker-rails'
-gem "nested_form"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass', '3.3.3'
